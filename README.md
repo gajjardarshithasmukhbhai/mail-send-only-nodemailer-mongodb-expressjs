@@ -18,6 +18,7 @@ return bcrypt.hash(password,12)
         console.log("error",err);
       });
 ```
+---
 ### CSRF Token
 ```javascript
 var csrf=require('csurf');
@@ -25,11 +26,12 @@ var csrfprotection=csrf();
 app.get("/cart",csrfprotection,cart.cart_controller);
 app.post("/Cart",csrfprotection,cart.carts_controller);
 ```
+---
 **when you request post method so that time CSRF invalid Error is occur so solve this thing**
 ```html
 <input type="hidden" name="_csrf" value="#{csrf}">
 ```
-
+---
 
 
 
