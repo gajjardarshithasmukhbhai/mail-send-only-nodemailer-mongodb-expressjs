@@ -65,5 +65,25 @@ transporter.sendMail(mailOptions,(err,data)=>{
 });	
 ```
 >Application photo
-### Images
-![Home Page](https://cdn.pixabay.com/photo/2015/12/06/18/02/architecture-1079806_960_720.jpg)
+---
+### session protection and cookies
+**connect-mongodb-session package install in npm** 
+```javascript
+let MongoDBStore=require('connect-mongodb-session')(session);
+var store = new MongoDBStore({
+  uri: 'mongodb+srv://DARSHITgajjar:Zxcvb@123@cluster0-sjkiq.mongodb.net/gajju?retryWrites=true',
+  collection: 'mySessions',
+});
+app.use(session({
+	secret:'Gajjar darshit Hasmukhbhai',/*any text given sigin time e hash code ma hash code rupe cookie ma te store te thase production ma long string hovi joie*/
+	resave:false,/*aa em batave upcoming req ma te session te save thato nathi*/
+	saveUninitialized:false,/*the session cookie will not be set on the browser unless the session is modified.*/
+	store:store,
+	cookie:{
+	 	maxAge:50000,
+	}
+}));
+
+```
+### checkout my Website
+
