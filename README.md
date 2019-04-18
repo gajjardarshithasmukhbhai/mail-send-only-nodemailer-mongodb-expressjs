@@ -35,15 +35,30 @@ app.post("/Cart",csrfprotection,cart.carts_controller);
 
 
 
-### Encrypted password code
+### E-Mail sending
 ```javascript
-let bcrypt=require('bcryptjs');
-return bcrypt.hash(password,12)
-			.then(hashPassword=>{
-        console.log("hashpassword",hashPassword);
-      })
-      .catch(err=>{
-        console.log("error",err);
-      });
+const nodemailer=require('nodemailer');
+let transporter=nodemailer.createTransport({
+service:'gmail',
+auth:{
+	user:'testing.gajjar1998@gmail.com',
+	pass:'Mnbvcxz@123'
+}
+});
+let mailOptions={
+							from:'testing.gajjar1998@gmail.com',
+							to:email,
+							subject: `Hello user you signup`,
+							html:`your html code`,
+						}
+						transporter.sendMail(mailOptions,(err,data)=>{
+							if(err)
+							{
+								console.log("darshit error avi",err);
+							}
+							else{
+								console.log('email sent');
+							}
+						});	
 ```
 
