@@ -46,19 +46,19 @@ auth:{
 }
 });
 let mailOptions={
-							from:'testing.gajjar1998@gmail.com',
-							to:email,
-							subject: `Hello user you signup`,
-							html:`your html code`,
-						}
-						transporter.sendMail(mailOptions,(err,data)=>{
-							if(err)
-							{
-								console.log("darshit error avi",err);
-							}
-							else{
-								console.log('email sent');
-							}
-						});	
+	from:'testing.gajjar1998@gmail.com',
+	to:email,
+	subject: `Hello user you signup`,
+	html:`your html code`,
+}
+transporter.sendMail(mailOptions,(err,data)=>{
+	if(err)
+	{
+		console.log("darshit error avi",err);
+	}
+	else{
+		console.log('email sent');
+	}
+});	
 ```
 
