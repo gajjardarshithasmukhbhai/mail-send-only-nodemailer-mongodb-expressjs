@@ -32,7 +32,9 @@ app.post("/Cart",csrfprotection,cart.carts_controller);
 <input type="hidden" name="_csrf" value="#{csrf}">
 ```
 ---
-
+**when you want to use csrf token pass one to another page so make sure name is**
+#### _csrf 
+**in input text**
 
 
 ### E-Mail sending
@@ -61,4 +63,3 @@ transporter.sendMail(mailOptions,(err,data)=>{
 	}
 });	
 ```
-
