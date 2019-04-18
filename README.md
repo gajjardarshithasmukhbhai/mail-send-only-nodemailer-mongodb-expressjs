@@ -7,7 +7,7 @@ I give security features like
 ->CSRF protection
 ->Encrypted protection system
 ```
-###Encrypted password code
+### Encrypted password code
 ```javascript
 let bcrypt=require('bcryptjs');
 return bcrypt.hash(password,12)
