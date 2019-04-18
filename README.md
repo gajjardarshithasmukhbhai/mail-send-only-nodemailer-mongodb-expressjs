@@ -7,4 +7,14 @@ I give security features like
 ->CSRF protection
 ->Encrypted protection system
 ```
->hello Gajjar
+###Encrypted password code
+```javascript
+let bcrypt=require('bcryptjs');
+return bcrypt.hash(password,12)
+			.then(hashPassword=>{
+        console.log("hashpassword",hashPassword);
+      })
+      .catch(err=>{
+        console.log("error",err);
+      });
+```
